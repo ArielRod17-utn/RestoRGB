@@ -1,0 +1,120 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="RESTO.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+   
+    <%--https://img.freepik.com/fotos-premium/mesa-madera-restaurante-borrosa-fondo_81724-265.jpg?w=740--%>
+
+    <style>
+        body {
+            background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYVFRgVFhYYGBgaGhgYGhgaGhoYGhoYGBgcGhoaGhgcIS4lHB4rIRgaJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMDw8PHBERHjEnISg3MT8/MT83MTYxPzc0PzE1ND80NDQ1MTE9ODE0Pz80NjE0NDMxNDQ0MUA0NzE0NDE0Mf/AABEIALcBEwMBIgACEQEDEQH/xAAbAAADAQEBAQEAAAAAAAAAAAAAAgMBBAUGB//EADkQAAEDAQUGBAYBAgYDAAAAAAEAAhEhAxIxQVEEYXGBkfAFobHBBhMi0eHxMlKCFBUjQmKiB3KS/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAEEAwIF/8QAJBEBAQEAAgICAAcBAAAAAAAAAAECAxESITFBBBMiUYGhwXH/2gAMAwEAAhEDEQA/APyiTPkjPvksvd+iBjy79EF7O0IMjd0mY8lRxvGuBpG6lYGi5xjO73Tl3tjy+wQJtOzlji0qYXqtN8MBEkgtPShG+i4bewuHdqgkFRpwStCqxqo1oXSyvHvBSYFdrFFZmumyIPeik1ne9XDckFC4TPe9LfrgO/wkKoMYQAaYjHvBUAwr9+8UzBjngtaBznmgy5XsZJiFRsT3pCf5YxQIMOxiO+qA090rKqLPghzRiNT0PZQQfIjHTFMHYZdFW0dMcK44qcEnEDv1RWMCaSKRki7C28fyiFLcuKxzacP33wVCCMOylOvfePVBFwSPVXd81N4n0771VE3VCi8KplKXIiJCVwVSFMhUScplVKm5AiEQhB5wPp7JmGv67zSBqZmndY+3kvIoK4ZT0/l7ei0HdlPmFlkK46esehT50y9s/IFBaxcYpkff1ktXftd0tvRjEg5H2XnAm6cwTI1+nDjj/wBV1h4ILJpHHCIMb5CDltLG7wOBWTFevBejaPD5vRHTdH5XBasLTGIyP5yVFGjJVYce8MVzsnKu7NdDT33xRVGmvmqtKi0KjXKC8CFgqsa9VbggdtcVZrVJpPNdLO+OiKW53He9UFkcjCYPAyM9xinDAcKcx3kggW+/CvonLdKj1pEp3McJqJNKIdZ76zwQTflTLmoxuhdYDtQccSFhacYFO8kEQymC1rcB3wVHMp+VjG8+/wA+SBmWd6u8evrTyTWgzjA4JmPEQN3KEg/kcfvCDicRJnvcpv8A2r29mJ3rnhVEjWSUt1UJUickQjzpvUgqErLo5qhJSPatcTKW8oJ3liEKjgPfJaBSeXLsrp2awa8wXXQIlxGtIAzJrTitt9lu/STWbowOsHcDquflO+hzh0A76dc0WVrzyjvvBe074ceNnfblwAaS0tP+4hxaQDucCOIK8Frf3v8AxBSazrvr6ermzrv7dTThpkDgTUeo9FSzOmOAJ0ggilM/LgpvdhgIaInefMYosXzTeOoEdF6eXUQNI+n1GXU9wuu6HgNdiPp4HIz5LlBo7QjyP6w3qrNdB1HPHBBC0sbp90Mcu9wa4RgMdY68PMLhtrEtMHDIqijSqsZKiwlWY/ciqssl0MYIB73KF7vvuqrePfkoOljN9VZrQcRBimh3biuMOpvFPt3vVW254Z980HSbIZHnmluaY995KB2id333BUbbVrU990QUJMRTr7LHlw7P6Qx+n39krnjKOVPeqCja49YCq1g0XO13f5VA5FXgCBjQqL7Ouo79kNOqHup2FUTewio5pHE4p3uOagKTplrwQTe6qwBa5qS9CBXjvvioPV3nXsrncVUIQi8FhHBSPllw1KAeUhWkJCUDNdGS1LAQg5NtaGPeycC0GML7WwfMuC7fDXC1vMcSH3fpdjMVbNccAvc2b4Zvve82b7SH1kwC5wmQB9T6mZBiq6tu8PfYWdmflizvWooIF5rWk1bjWcScll1yd59T+Xvw6ndW8Y2n/Ev/AMO10XSBda1xvEfU2sRvmZncuBmyGxcWixDwRVloAeDoIEHHAxU0XqeFtA2q7kZdezBAABBzMUPFfU7R4P8ANYTfLXVLZAqJoADIGnJYtckxZn6/b/Wzh/Vnt+Z+KeHtcS8NbZtIqwA3WwAKTUik4BeWG1Lq6mdDAJ85X2/iXgFnc+YHuBzLnud9QMEVNIMr4PaCQ4jCJ6ECR1C28HJ33HL8RiTqx0vMbpjk4NiOEOn+4cr2b/pJ0HqO+q81riSK1kCNQePIV3LusSbhJjKvAhppn/NaGV13zeikQBoBBbWdKGNzkluw3RoXNAIwE0PqCsaJdvAIbuoc8zPmuhjoiYIJzqJAB/tkOoUHG5haYI/KtZnJUtPqNQYjHMEEY6HFQcwtNc8Cqrrs61Ttbr33VcjXnd0C6GPpEjp7oLCM0wM96/lSLz+++5WB8KC7bMSrsswRGAx7hcXzPbROy2nGufsg6QznyzQ5uWJmOnvXBTa8RA7+2aZjKjIDs8EFWWYpEHkPNNc9uwsYwkRhXBUbxnvKfXJFKyAh1rOA58ExF4kUoMtZA9whrcERD5k4qb3A4YyuksaImugqKYLmuEyQFREuoplxVHsiuvRI5hREXEqRKdwUnFUK4nvcpuKYuSkoFKm4pnFTcUG9UJEIP33wyzbs73Wbv4ucX2ZIxkVa3SCJjMGmBS/EfhDNqsrj3EfU0tc2LzTOInUS2uq6XgmLw4yJBFYqcNc8FJ724iMW/wAQBAEGDqT7iFkznxnX07W+V9vzD4gszs20fLsjdcQHC+altPpBmtRJnGBovpth+I3tAZaWbWkNBm9eYRNYgUOJxyXl/GuwstrZtq4Sy58tsVksJJrzPReDsfhAg3A67OBMAHCpx/2inBZuWY1e5ff/AB1zq4nj09jZ/E7BztqtXEfKv/QSYDn3JddB1IAC+a8d2NrrVr7EBwtGyWgQWuaATP8ATIINPde07ZrGzYA+0YwMMtYwfMdJFYYJaJnEkGq8u08fuuLWsLGfVdeBcLS4yS8NBDhTiumLZe8w13c+/j+3iBv1EZg51gjGaYCq6L7RIgQajL+X8qDL6Qq+J7RZENAF15ILrogFsH6pwINCCuNtRE4CoO6k5xl/9LZm9ztkXZaVjHh+N0rpsnyKjGJrW7AxBG+ZXEwTmJAphi00H54KjRprSRWRuy4f8gvQ7fmcCdZoc4OnnU7hNX2EigpjGgrnlgehXMy1AukUIocHakExjMN6ToDSy2pwbANKtroThqMEEhZxNcI78vRMHJw29IFRNIxjJTuEE994hUUBQlaUzXQitAJTsZVJe5KrHTu388EFQIPeKrZPBd5clzl571QCJx9v0FB33sB6YmvHzQ9+Q5aAd95rldaT2eoOHJMLYYJ0LMMVvZzP55qt/LPjnRcd5uOawmaDh9vsgs+1oIHYKG2gI++i5zxpqleK495qh7V4NMu/2pGYE/jklIU3OhEFoMTy69lRfE8KdE73698lC+gm4pC5PaKRKoVxSOK2UjigLyEsoQfu3hu3NtoukteyQ+zkNJmrTB/kIBII37wvl/jL4gt2/wCnZ2doxkw+2LS3P+DZw0vZ5Yr2Pg7YLwbbNe1zGF7RIN+ggQ4UumZjcOX0Vi4WjbwF6ccwTBkERjyWPN1c/qdY/LLPa3loqGQMSJI4XqDi1o4rjtNrvODS99qZr9d0XRUyYoByX03xZ8LCzJ2ljHOYSL9kJN2T/Jud2YplkvH/AMmtX2gcyytGNuXSbpg4Ou4ERIquGpMd91om/KySM/wLn3Xss2yWguJcSXE51EAjDFet/kbn2RFrBABDWtF1oIFTIxOGqXZNpLHNacZ+oGKGSM8l7m3l7mw1pFWm7eAzE0nMSsU59Tfdnr930Pyc+Ekr8ai6br23mtcZaTUVrdIw9FRrQTSc4JiYOsU1C9D4j2Q2e0OpAfD288fMHsrzAYoOXfJfbxqazLPt8Xkz47sdDnHXIHKhApxpT9KgM4Y6jhAM8FJuuUZ48kxdGdRIOhy/fFe3hUAxemPOulRXDoeK0G67PIka1nPChIQx0gjDMaGh5UveZWyDlEiKcgJP9qC1htRYfpw3jcPevJNE03A9RXzouZggmYjTSp6ftD9pumW4TTU/ZBWDMLQ1QZaOxcaqt5UPGi1ru++Cxr1t+f2iqB/f7Wg94woB3H8dVVr4xlEWaycKdKx7qnyxiVBrxiDPen2VGumgzynXdO9FMGjJKGx9kzJ3+6xzu6KBQ+Ca/nX2WWj/ALpHOrHfdVGaKooXpHumO8ypgpS77d9UGwpFoQ96QvVGOEKZP2TPcpuKDHFTK0lKSgxCJQg/S/h74kYxgs2uLRevYUMmXACaTu1X1Fj4mxoLwROMiP4E1Dv6oE9F+et+HWVfZPIu3TdgXYgk45mAOa5tnsnBj/lC9ddBF+kOpF7AGRhoRVYccuNT077zc3qv13brGWOcx7nBrS4Nc5z5c2aXpmCRqvh7H4yt3AMbsrGPDrkG0kCJkwGyRQ4Hmvg9qG0Fjib7bJjoLGudcDqVAw8l2eE2jn2jXAj6boIiAWuJaeBBI4clOXGeu7O3vGrPUrq8T236yQ83w6/IBDXGpMTN0yYImKLu8L8f2m0abPEzzI3n/bn1wXreH7K1gd8649znO30J1OAnXRd2zMsLObl3cBUxNN64z8rWeq7eXJn3HzPxrsjrllbOhpktIB+kBwwB4t/7FfHtjPWeXCV7/wAV+JB73tgQAGtrJF114u9o/wCK+bYffrTpn2Ft4JM4knwy81713fl0i1ERp+onKnKiY2mNKVMaGOtTC5Z74zPe9OzoZj90XZxdTHmcd0zp3imtXiJnlPWJz3LkdalsHPz4yp3jj3yCDotNomfqcMuM5LbFkVJrpiAoM1JlUa5UdbCqSPseea4wVQWiCwcmB0UA+tev3VGnTv7oKNeN3FUDyM6aGo6rmd39kNccUHW0j/135fhM+RoR6ZzOI9FytdB0PGFrrXl5elEF/nd4Qd3foput9DPNQL5SEoL/ADczjrh7IFoucFMEDl6UvWJSUGOelJWEpSVQOckcUOKQlBpKUlYSgoCUJbyEH0uzfEr7V3+q+rQQ0Q1kTjRoAJoByC9/wTb2vsywGXMvAtdUODpIO8VhfGWOxPtGuNmyTLnPIaTAJJGAVNn2It+pzrmRcXRyAEdCsGuLHd8a0a1rWZK+n27xC+19lLIcZfLZdQRdABwAC8TwvYXD5waSLwaAatAAeC6dKBTs/FbGzBDQXnfIaeQieaU+OOexw+kEthoqYg4kRu35JnHJ119JbJJ3XuDarKzZddaFxOIsxAPF5x6rw/FfGw5payGtiIbjzcanovCt7VzjLnEnOpiMozUgF0x+GzL3TXNb6h3PmkAep5oDkkIC0SdONva9/CTTDkqMHI/pQaPdUD4Hc/hVFLZgaTNTrIKmO/skmcfumaqGaqBTlM13RBSUzSpNKaUFQ5MCpSmvILXju73JbymCsLkFg7esLkjXLAUFJTAqV5YXoLEx9kt9QLyi+gq56QuSXkpKoclISlJWSg0lZKyVkoGlKSsKUlAyEiER+k/+NtubbG3Y5rGmGEAf0y6eNY6r4/41sms2u0ayLpDXADIuaCR1rzXk7Btz7F4tLNxa5uBHoRmNyXbdrdavdaPMudEnDAAYcllzw+PLdz4sd9cvliS/KCcPIBAzx14TokWhaHFoTTolQCgdp86ckzm10nXfVTCsXNAmeX2QbAAmJ8ugUyZqlmUAoHaVspFoVDgpwVNMCgcFMCkBWygqChyleWygeVsqcolBSdFiS8tBQUDkpCy8sLkDQslAQXBBhWFbeWQgUohaQslUYQhEpUGEIQUqAhCxCIkhCF5ULViEGhCE2CBgYFc8lMlBKEDNK1ImQaFsrJQEDAppU5WqigK1ICglA4K0FTlbKCkolKCsvIHCCUl5BKB5QHJJQgpeQAlCCUDXkXkl5EoNLksolZKDVhKyUpKo0lKXIlYoNlCxCIRCEKKFoCxNKDTRIShCAlasWoBbKxCBkLESgZEpZWyg1aCsQqGC2UkoJQNeWLEEoNLkSsCaEGhMklEoGvLJSgrUDIJSyslBpKUlBKxBsrChCAQhYgEIQgxAQhQalQhAIQhAIQhALUIQCEIQEolCEGoQhBsolCEAgIQqNlZK1CDAVqEICUShCAlCEIMQhCAQhCDEIQgEIQg//9k=');
+            background-size: 110% auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 100%; 
+            text-transform: fullsize-kana; 
+            font-family: 'Verdana', sans-serif; 
+            text-shadow:unset;
+           
+        }
+        .nav-user {
+            font-size: 80%; 
+            text-transform: fullsize-kana; 
+            font-family: 'Verdana', sans-serif; 
+            text-shadow:unset; 
+            
+        }
+
+        h1 {
+            color: deeppink;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 2px 2px 3px black;
+            align-items: center;
+            font-size: 60px;
+        }
+
+        .username {
+            width: 100%;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<%--class="navbar bg-dark border-bottom border-body" data-bs-theme="dark"
+    class="navbar navbar-expand-lg bg-body-tertiary"--%>
+
+
+    <form id="form1" runat="server">
+        <nav  class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+                <%if (int.Parse(Session["IdPerfil"].ToString()) < 2)
+             {%>
+                <a class="navbar-brand" href="PaginaGerente.aspx">RGB-Resto</a>
+                <%} %>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        
+                        <li class="nav-item">
+                     <%if (int.Parse(Session["IdPerfil"].ToString()) < 2)
+                         {%>
+                            <a class="nav-link active" aria-current="page" href="GestionUsuarios.aspx">Personal</a>
+                        </li> 
+                        
+                        <li class="nav-item">
+                       
+                            <a class="nav-link" href="Gestion_Menu.aspx">Menú</a>
+                        
+                        </li>
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="Reporte.aspx">Reportes</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="GestionMesa.aspx">Mesa</a>
+                            <%} %>
+                        </li>                      
+                        <li class="nav-item">
+                            <a class="nav-link" href="default.aspx">Cerrar sesion</a>
+                        </li>
+                         <li class="nav-item">
+                         <a class="nav-link" href="CambiarContrasenia.aspx"> Cambiar contraseña</a>
+                         </li>
+                        <li class="nav-item">
+                         <a class="nav-link" style="float: right; inset-block-end: revert"></a>
+                         </li>
+                    </ul>
+                </div>
+            </div>
+             <a class="nav-user navbar-brand username""><asp:Label runat="server" ID="NombreApellidoUser"></asp:Label></a>
+        </nav>
+
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
